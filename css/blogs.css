@@ -1,0 +1,74 @@
+#blogs {}
+
+#blogs > .section_title {
+  padding: 0 24px;
+  color: rgb(58, 56, 35);
+}
+
+#blogs_container {
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.blog-card {
+  margin-top: 16px;
+  margin-left: 16px;
+  padding: 0;
+  height: 320px;
+  width: 240px;
+  border: 1px solid darkkhaki;
+  border-radius: 25px;
+  background-color: lightyellow;
+  box-shadow: 5px 5px rgba(194, 192, 87, 0.7);
+}
+
+.blog-card > div.card-title {
+  margin: 0;
+  padding: 16px;
+  height: 32px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: darkkhaki;
+  color: rgb(228, 227, 210);
+}
+
+.card-title > div.card-image {
+  margin: 0;
+  padding: 0;
+}
+
+.card-image img.card-img {
+  height: 80px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.blog-card > .card-body {
+  margin: 0;
+  padding: 0 16px;
+  display: grid;
+  height: 136px;
+  grid-template-columns: auto;
+  grid-template-rows: 24px auto 16px;
+  grid-template-areas:
+    "date date date date date"
+    "summary summary summary summary summary"
+    ". . . link link";
+}
+
+.card-body > div.card-date {
+  grid-area: date;
+}
+
+.card-body > div.card-summary {
+  grid-area: summary;
+  overflow: hidden;
+}
+
+.card-body > div.card-link {
+  grid-area: link;
+}

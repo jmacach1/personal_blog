@@ -1,0 +1,71 @@
+#blog {
+  margin: 0;
+  border: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 320px 48px 16px auto auto auto;
+  grid-template-areas: 
+    "image image image image image image"
+    ". . title title . ."
+    ". . author . aside ."
+    ". . date . aside ."
+    ". . article article aside ."
+    ". . article article aside ."
+    ". . article article . .";
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: darkslategray;
+}
+
+#blog > .blog-image {
+  grid-area: image;
+  margin: 0;
+  width: 100%;
+}
+
+.blog-image > img.blog-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#blog > .blog-title {
+  grid-area: title;
+}
+
+#blog > .blog-author {
+  grid-area: author;
+}
+
+#blog > .blog-date {
+  grid-area: date;
+}
+
+#blog > .blog-article {
+  grid-area: article;
+}
+
+#blog > .blog-aside {
+  color: white;
+  background-color: rgba(95, 158, 160, 0.479);
+  border-radius: 25px;
+  grid-area: aside;
+}
+
+.blog-aside ul {
+  list-style-type: none;
+}
+.blog-aside li {
+  margin-top: 8px;
+}
+
+.blog-aside img.icon {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+
+.blog-aside button {
+  background-color: antiquewhite;
+}

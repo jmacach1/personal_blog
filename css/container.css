@@ -1,0 +1,33 @@
+#grid-container {
+  display: grid;
+  margin: 0 auto;
+  width: 100vw;
+  min-width: 360px;
+  max-width: 960px;
+  grid-template-columns: auto;
+  grid-template-rows: 80px 48px auto 48px;
+  grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "main main main main"
+    "footer footer footer footer";
+  background-image: url("../images/main_bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#grid-container > .grid-header {
+  grid-area: header;
+}
+
+#grid-container > .grid-main {
+  grid-area: main;
+}
+
+#grid-container > .grid-nav {
+  grid-area: nav;
+}
+
+#grid-container > .grid-footer {
+  grid-area: footer;
+}
